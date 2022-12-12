@@ -21,7 +21,7 @@ function App() {
     params.append('source', from);
     params.append('target', to);
     params.append('api_key', process.env.TRANSLATE_API_KEY);
-    axios.post('https://libretranslate.de/translate', params, {
+    axios.post('https://libretranslate.com/translate', params, {
       headers: {
         'accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -32,7 +32,7 @@ function App() {
     })
   };
   useEffect(() => {
-    axios.get("https://libretranslate.de/languages", { headers: { 'accept': 'application/json' } }).then(res => {
+    axios.get("https://libretranslate.com/languages", { headers: { 'accept': 'application/json' } }).then(res => {
       console.log(res)
       setOptions(res.data)
     });
@@ -81,9 +81,9 @@ function App() {
         <div className="Caption">
           {output}
           <br />
-          <button onClick={() => setDisplay(!display)}>Show translation</button>
+          <button className="Translate-Button" onClick={() => setDisplay(!display)}>Show translation</button>
           <br />
-          {display && <div>{caption}</div>}
+          {display && <div className="Display-Caption">{caption}</div>}
         </div>
       </div>
     </div>

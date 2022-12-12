@@ -5,12 +5,15 @@
   text-align: center;
   height: 100vh;
   display: flex;
+
 }
 
 .App-container {
   background: #4b6cb7;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1em;
+  font-family: 'Courier New', Courier, monospace;
 
 
 }
@@ -22,6 +25,18 @@
   flex-direction: column;
 }
 
+.Display-Caption {
+  padding-top: 1em;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: white 0px 0px 10px;
+
+}
+
 .Select {
   color: white;
+}
+
+.Translate-Button {
+  font-family: Arial, Helvetica, sans-serif;
 }
